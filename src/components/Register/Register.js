@@ -59,7 +59,7 @@ const Register = () => {
         </Form>
         <p>
           Already have any account?
-          <Link className="link-register" to="/register">
+          <Link className="link-register" to="/login">
             Login Here
           </Link>
         </p>

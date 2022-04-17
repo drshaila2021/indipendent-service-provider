@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand href="#home">Confidence Dental</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -17,8 +17,17 @@ const Header = () => {
               <Nav.Link as={Link} to="/services">
                 Services
               </Nav.Link>
+              <Nav.Link as={Link} to="/reviews">
+                Reviews
+              </Nav.Link>
+              <Nav.Link as={Link} to="/blogs">
+                Blogs
+              </Nav.Link>
+              <Nav.Link as={Link} to="/about">
+                About
+              </Nav.Link>
 
-              <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -31,11 +40,9 @@ const Header = () => {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
+               */}
             </Nav>
             <Nav>
-              <Nav.Link as={Link} to="/about">
-                About
-              </Nav.Link>
               <Nav.Link as={Link} to="/login">
                 Login
               </Nav.Link>
