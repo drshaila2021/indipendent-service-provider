@@ -41,19 +41,16 @@ const Login = () => {
       <h3>Please login here</h3>
 
       <Form onSubmit={handleLogin}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3 w-50" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
           <Form.Control
             onBlur={handleEmailOnBlur}
             type="email"
             placeholder="Enter email"
           />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
+        <Form.Group className="mb-3 w-50" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
             onBlur={handlePasswordOnBlur}
@@ -61,16 +58,14 @@ const Login = () => {
             placeholder="Password"
           />
         </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-          <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Button variant="primary" type="submit">
+
+        <Button variant="primary mb-3" type="submit">
           Submit
         </Button>
       </Form>
       <p>
         Don't have any account?
-        <Link className="link-register" to="/register">
+        <Link className="link-register mx-1" to="/register">
           Register Here
         </Link>
       </p>

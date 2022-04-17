@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 
@@ -9,6 +9,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+  const navigate = useNavigate();
 
   const handleEmailOnBlur = (event) => {
     setEmail(event.target.value);
@@ -22,6 +23,7 @@ const Register = () => {
     event.preventDefault();
     createUserWithEmailAndPassword(email, password);
     console.log(email.password);
+    navigate("/home");
   };
 
   return (
@@ -37,9 +39,6 @@ const Register = () => {
               type="email"
               placeholder="Enter email"
             />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -50,16 +49,14 @@ const Register = () => {
               placeholder="Password"
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check me out" />
-          </Form.Group>
-          <Button variant="primary" type="submit">
+
+          <Button variant="primary mb-3" type="submit">
             Submit
           </Button>
         </Form>
         <p>
           Already have any account?
-          <Link className="link-register" to="/login">
+          <Link className="link-register mx-1" to="/login">
             Login Here
           </Link>
         </p>
