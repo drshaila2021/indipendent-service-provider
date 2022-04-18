@@ -1,6 +1,6 @@
-# Project - Fashion House
+# Project - Confidence Dental Surgery
 
-## Fashion House Site Link
+## Confidence Dental Surgery Site Link
 
 [Confidence Dental Surgery](..)
 
