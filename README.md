@@ -19,9 +19,9 @@
 
 ## Project Technology
 
-- This is a SPA created with react
-- create-react-app is used for initial project setup
-- react-router is for route setup and protected route has been used
+- This is a SPA created with react.
+- create-react-app is used for initial project setup.
+- react-router is for route setup and protected route has been used.
 - Google firebase authentication platform has been for authentication. And the project provides email/password base and google provider for authentication.
 - react-firebase-hooks have been used for user creation, sign in methods.
 - Project has been deplyed at Firebase platfrom.

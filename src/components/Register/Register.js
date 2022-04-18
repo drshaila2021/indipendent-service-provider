@@ -20,6 +20,7 @@ const Register = () => {
     setPassword(event.target.value);
     console.log(event.target.value);
   };
+
   const handleCreateUser = (event) => {
     event.preventDefault();
     createUserWithEmailAndPassword(email, password);
@@ -39,6 +40,7 @@ const Register = () => {
               onBlur={handleEmailOnBlur}
               type="email"
               placeholder="Enter email"
+              required
             />
           </Form.Group>
 
@@ -48,6 +50,7 @@ const Register = () => {
               onBlur={handlePasswordOnBlur}
               type="password"
               placeholder="Password"
+              required
             />
           </Form.Group>
 

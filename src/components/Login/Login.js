@@ -31,6 +31,11 @@ const Login = () => {
   if (user) {
     navigate("/home");
   }
+  let errorElement;
+  if (error) {
+    errorElement = <p className="text-danger">Error: {error.message}</p>;
+  }
+
   const handleLogin = (event) => {
     event.preventDefault();
     signInWithEmailAndPassword(email, password);
@@ -48,6 +53,7 @@ const Login = () => {
             onBlur={handleEmailOnBlur}
             type="email"
             placeholder="Enter email"
+            required
           />
         </Form.Group>
 
@@ -57,9 +63,10 @@ const Login = () => {
             onBlur={handlePasswordOnBlur}
             type="password"
             placeholder="Password"
+            required
           />
         </Form.Group>
-
+        {errorElement}
         <Button variant="primary mb-3" type="submit">
           Submit
         </Button>
