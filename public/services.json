@@ -2,19 +2,19 @@
   {
     "id": "625bd24bb250d3ecd55ef999",
     "picture": "https://i.ibb.co/VS9bR7K/service1.jpg",
-    "price": 315,
-    "name": "Moon"
+    "price": 3500,
+    "name": "Diagnosis and image"
   },
   {
     "id": "625bd24bf121aa739103ddb6",
     "picture": "https://i.ibb.co/Pc99vMC/service2.jpg",
-    "price": 144,
-    "name": "Kara"
+    "price": 1500,
+    "name": "Examination and checkup "
   },
   {
     "id": "625bd24bacf0e343bc97d434",
     "picture": "https://i.ibb.co/wNYBLfc/service3.jpg",
-    "price": 351,
-    "name": "Murray"
+    "price": "5000/crown",
+    "name": "Crown and Bridge,Implantation"
   }
 ]

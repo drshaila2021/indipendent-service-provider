@@ -8,8 +8,8 @@ const Service = (props) => {
   return (
     <div className="service">
       <img src={picture} alt="" />
-      <h4>Name: {name}</h4>
-      <h4>Price: {price}</h4>
+      <h4>Service Name: {name}</h4>
+      <h4>Price: ${price}</h4>
       <Link to="/login">
         <button className="btn btn-primary">Checkout</button>
       </Link>

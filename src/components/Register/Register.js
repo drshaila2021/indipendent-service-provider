@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -60,6 +61,8 @@ const Register = () => {
             Login Here
           </Link>
         </p>
+        <h4>Or</h4>
+        <SocialLogin></SocialLogin>
       </div>
     </div>
   );

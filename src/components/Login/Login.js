@@ -6,6 +6,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 import "./Login.css";
 
@@ -69,6 +70,8 @@ const Login = () => {
           Register Here
         </Link>
       </p>
+      <p>Or</p>
+      <SocialLogin></SocialLogin>
     </div>
   );
 };
