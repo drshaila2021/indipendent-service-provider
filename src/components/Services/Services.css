@@ -4,13 +4,8 @@
   grid-gap: 10px;
   margin: 20px;
 }
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 576px) {
   .services {
     grid-template-columns: repeat(1, 1fr);
-  }
-  @media screen and (min-width: 577) and (max-width: 992px) {
-    .services {
-      grid-template-columns: repeat(2, 1fr);
-    }
   }
 }

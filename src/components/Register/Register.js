@@ -14,17 +14,14 @@ const Register = () => {
 
   const handleEmailOnBlur = (event) => {
     setEmail(event.target.value);
-    console.log(event.target.value);
   };
   const handlePasswordOnBlur = (event) => {
     setPassword(event.target.value);
-    console.log(event.target.value);
   };
 
   const handleCreateUser = (event) => {
     event.preventDefault();
     createUserWithEmailAndPassword(email, password);
-    console.log(email.password);
     navigate("/home");
   };
 
@@ -34,7 +31,7 @@ const Register = () => {
         <h3>Please Register Here</h3>
 
         <Form onSubmit={handleCreateUser}>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Group className="mb-3 w-50" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control
               onBlur={handleEmailOnBlur}
@@ -44,7 +41,7 @@ const Register = () => {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3 w-50" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
             <Form.Control
               onBlur={handlePasswordOnBlur}

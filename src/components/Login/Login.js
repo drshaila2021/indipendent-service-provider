@@ -21,21 +21,18 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
   const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
-  //   const [user, loading, error] = useAuthState(auth, options);
+  const [user1, loading1, error1] = useAuthState(auth);
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   const handleEmailOnBlur = (event) => {
     setEmail(event.target.value);
-    console.log(event.target.value);
   };
   const handlePasswordOnBlur = (event) => {
     setPassword(event.target.value);
-    console.log(event.target.value);
   };
   if (user) {
-    // navigate("/home");
     navigate(from, { replace: true });
   }
   let errorElement;
@@ -46,7 +43,6 @@ const Login = () => {
   const handleLogin = (event) => {
     event.preventDefault();
     signInWithEmailAndPassword(email, password);
-    console.log(email.password);
   };
   const resetPassword = async (event) => {
     if (email) {
