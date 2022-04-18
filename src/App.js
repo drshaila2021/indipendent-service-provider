@@ -13,6 +13,8 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./firebase.init";
 import { Button } from "react-bootstrap";
 import Footer from "./components/Footer/Footer";
+import Checkout from "./components/Checkout/Checkout";
+import RequiredAuth from "./components/RequiredAuth/RequiredAuth";
 
 function App() {
   return (
@@ -22,6 +24,14 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/services" element={<Services></Services>}></Route>
+        <Route
+          path="/checkout"
+          element={
+            <RequiredAuth>
+              <Checkout></Checkout>
+            </RequiredAuth>
+          }
+        ></Route>
         <Route path="/reviews" element={<Reviews></Reviews>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/about" element={<About></About>}></Route>

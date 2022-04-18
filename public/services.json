@@ -3,18 +3,21 @@
     "id": "625bd24bb250d3ecd55ef999",
     "picture": "https://i.ibb.co/VS9bR7K/service1.jpg",
     "price": 1000,
+    "des": "Provide the service of taking images for diagnosis.",
     "name": "Diagnosis and image"
   },
   {
     "id": "625bd24bf121aa739103ddb6",
     "picture": "https://i.ibb.co/Pc99vMC/service2.jpg",
     "price": 400,
+    "des": "We provide total mouth examination and checkup.",
     "name": "Examination and checkup "
   },
   {
     "id": "625bd24bacf0e343bc97d434",
     "picture": "https://i.ibb.co/wNYBLfc/service3.jpg",
     "price": "8000",
+    "des": "If required provide Implantation.",
     "name": "Implantation"
   }
 ]

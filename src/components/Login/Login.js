@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import {
   useAuthState,
+  useSendPasswordResetEmail,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import auth from "../../firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
@@ -14,6 +17,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+  const [sendPasswordResetEmail] = useSendPasswordResetEmail(auth);
 
   //   const [user, loading, error] = useAuthState(auth, options);
 
@@ -29,7 +35,8 @@ const Login = () => {
     console.log(event.target.value);
   };
   if (user) {
-    navigate("/home");
+    // navigate("/home");
+    navigate(from, { replace: true });
   }
   let errorElement;
   if (error) {
@@ -40,6 +47,14 @@ const Login = () => {
     event.preventDefault();
     signInWithEmailAndPassword(email, password);
     console.log(email.password);
+  };
+  const resetPassword = async (event) => {
+    if (email) {
+      await sendPasswordResetEmail(email);
+      toast("Sent email");
+    } else {
+      toast("please enter your email address");
+    }
   };
 
   return (
@@ -67,6 +82,8 @@ const Login = () => {
           />
         </Form.Group>
         {errorElement}
+        {/* <ToastContainer></ToastContainer> */}
+        {loading && <p>Loading....</p>}
         <Button variant="primary mb-3" type="submit">
           Submit
         </Button>
@@ -77,8 +94,18 @@ const Login = () => {
           Register Here
         </Link>
       </p>
+      <p>
+        Forget Password?{" "}
+        <button
+          className="btn btn-link text-primary pe-auto text-decoration-none"
+          onClick={resetPassword}
+        >
+          Reset Password
+        </button>{" "}
+      </p>
       <p>Or</p>
       <SocialLogin></SocialLogin>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
