@@ -6,7 +6,7 @@ import "./Service.css";
 const Service = (props) => {
   const { name, price, picture } = props.service;
   return (
-    <div className="service">
+    <div className="service text-center py-3">
       <img src={picture} alt="" />
       <h4>Service Name: {name}</h4>
       <h4>Price: ${price}</h4>

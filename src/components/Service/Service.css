@@ -1,3 +1,8 @@
 .service img {
   width: 400px;
 }
+
+.service {
+  border: 1px solid grey;
+  border-radius: 10px;
+}

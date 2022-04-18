@@ -1,0 +1,19 @@
+.review-container {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.review-container div {
+  border: 2px solid navy;
+  border-radius: 5px;
+}
+
+.btn-all-reviews {
+  background-color: navy;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
