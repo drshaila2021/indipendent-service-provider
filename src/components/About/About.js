@@ -5,7 +5,7 @@ const About = () => {
     <div>
       <h3 className="text-center my-5">About Me!</h3>
       <p className="mx-5">
-        I am Shaila Nasrin learning Web Development to become a Web Developer. I
+        I am Shaila N. learning Web Development to become a Web Developer. I
         have completed my Bachelor Degree. Currently I am staying abroad and
         here I was working as Online Shopping Associate. I am from a different
         background than IT, however the country I stay have opportunity for IT
